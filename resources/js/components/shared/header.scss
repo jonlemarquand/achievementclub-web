@@ -2,7 +2,7 @@
 
 .nav-header {
     background: $green;
-    padding: 14px;
+    padding: 8px 14px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -12,6 +12,71 @@
         font-family: $primaryFont;
         font-weight: 800;
         font-size: 18px;
+    }
+
+    &__burger {
+        width: 18px;
+        height: 18px;
+        position: relative;
+        transform: rotate(0deg);
+        transition: .5s ease-in-out;
+        cursor: pointer;
+        background: none;
+        border: none;
+        //padding: 8px;
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        span:not(.nav-header__burger--screen-reader-text){
+            display: block;
+            position: absolute;
+            height: 1.5px;
+            width: 100%;
+            background: $white;
+            opacity: 1;
+            left: 0;
+            transform: rotate(0deg);
+            transition: .25s ease-in-out;
+        }
+
+        span:nth-child(1) {
+            top: 0px;
+        }
+
+        span:nth-child(2), span:nth-child(3) {
+            top: 8px;
+        }
+
+        span:nth-child(4) {
+            top: 16px;
+        }
+
+        &.menu-active span:nth-child(1) {
+            top: 8px;
+            width: 0%;
+            left: 50%;
+        }
+
+        &.menu-active span:nth-child(2) {
+            transform: rotate(45deg);
+        }
+
+        &.menu-active span:nth-child(3) {
+            transform: rotate(-45deg);
+        }
+
+        &.menu-active span:nth-child(4) {
+            top: 8px;
+            width: 0%;
+            left: 50%;
+        }
+
+        &--screen-reader-text {
+            display: none;
+        }
     }
 
 }

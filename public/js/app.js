@@ -2194,20 +2194,45 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _searchIcon__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./searchIcon */ "./resources/js/components/shared/searchIcon.js");
 /* harmony import */ var _header_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./header.scss */ "./resources/js/components/shared/header.scss");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
 
 
 
 
 
 var Header = function Header() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(false),
+      _useState2 = _slicedToArray(_useState, 2),
+      menuActive = _useState2[0],
+      setMenuActive = _useState2[1];
+
+  var handleMenuActive = function handleMenuActive() {
+    setMenuActive(!menuActive);
+  };
+
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
     className: "nav-header",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_searchIcon__WEBPACK_IMPORTED_MODULE_0__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_searchIcon__WEBPACK_IMPORTED_MODULE_0__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
       className: "nav-header__logo-placeholder",
       children: "XA"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-      children: "="
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+      className: "nav-header__burger ".concat(menuActive ? 'menu-active' : ''),
+      onClick: handleMenuActive,
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {})]
     })]
   });
 };
@@ -2421,7 +2446,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".nav-header {\n  background: #4CC35B;\n  padding: 14px;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n}\n.nav-header__logo-placeholder {\n  color: #fff;\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 800;\n  font-size: 18px;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".nav-header {\n  background: #4CC35B;\n  padding: 8px 14px;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n}\n.nav-header__logo-placeholder {\n  color: #fff;\n  font-family: \"Raleway\", sans-serif;\n  font-weight: 800;\n  font-size: 18px;\n}\n.nav-header__burger {\n  width: 18px;\n  height: 18px;\n  position: relative;\n  transform: rotate(0deg);\n  transition: 0.5s ease-in-out;\n  cursor: pointer;\n  background: none;\n  border: none;\n}\n.nav-header__burger * {\n  margin: 0;\n  padding: 0;\n}\n.nav-header__burger span:not(.nav-header__burger--screen-reader-text) {\n  display: block;\n  position: absolute;\n  height: 1.5px;\n  width: 100%;\n  background: #fff;\n  opacity: 1;\n  left: 0;\n  transform: rotate(0deg);\n  transition: 0.25s ease-in-out;\n}\n.nav-header__burger span:nth-child(1) {\n  top: 0px;\n}\n.nav-header__burger span:nth-child(2), .nav-header__burger span:nth-child(3) {\n  top: 8px;\n}\n.nav-header__burger span:nth-child(4) {\n  top: 16px;\n}\n.nav-header__burger.menu-active span:nth-child(1) {\n  top: 8px;\n  width: 0%;\n  left: 50%;\n}\n.nav-header__burger.menu-active span:nth-child(2) {\n  transform: rotate(45deg);\n}\n.nav-header__burger.menu-active span:nth-child(3) {\n  transform: rotate(-45deg);\n}\n.nav-header__burger.menu-active span:nth-child(4) {\n  top: 8px;\n  width: 0%;\n  left: 50%;\n}\n.nav-header__burger--screen-reader-text {\n  display: none;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
