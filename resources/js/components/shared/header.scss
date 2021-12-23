@@ -1,0 +1,17 @@
+@import 'resources/sass/_variables.scss';
+
+.nav-header {
+    background: $green;
+    padding: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__logo-placeholder {
+        color: $white;
+        font-family: $primaryFont;
+        font-weight: 800;
+        font-size: 18px;
+    }
+
+}
