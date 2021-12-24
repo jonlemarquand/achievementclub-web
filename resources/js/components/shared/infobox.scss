@@ -1,0 +1,40 @@
+@import 'resources/sass/_variables.scss';
+
+.infobox {
+    background: $purple;
+    color: $white;
+    padding: 8px;
+    font-family: $primaryFont;
+    margin-bottom: 18px;
+
+    &__title {
+        font-size: 12px;
+        margin-top: 8px;
+        margin-bottom: 18px;
+    }
+
+    &__stats {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.infobox-stat {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    &__header {
+        font-size: 21px;
+        font-weight: 700;
+        margin: 0;
+
+        &--light {
+            font-weight: 400;
+        }
+    }
+
+    &__text {
+        font-size: 10px;
+    }
+}
