@@ -1,0 +1,11 @@
+@import 'resources/sass/_variables.scss';
+
+.footer {
+    margin-top: 20px;
+    position: relative;
+    top: 40px;
+    background: $green;
+    color: $white;
+    width: 100%;
+    min-height: 200px;
+}

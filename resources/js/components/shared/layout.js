@@ -1,6 +1,7 @@
 import Header from './header';
 
 import './layout.scss';
+import Footer from "./footer";
 
 const Layout = ({ children }) => {
     return (
@@ -9,6 +10,7 @@ const Layout = ({ children }) => {
         <main>
             {children}
         </main>
+        <Footer />
         </>
     )
 }
