@@ -1,0 +1,82 @@
+@import 'resources/sass/_variables.scss';
+
+.achievement-card {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 0 22px;
+    grid-template-areas: "img text text achievement";
+    padding: 14px 0;
+
+    &__background {
+        height: 100%;
+        background: $greenLight;
+        left: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+        max-width: 100vw;
+        position: absolute;
+        right: 50%;
+        width: 100vw;
+        z-index: -1;
+    }
+
+    &__img {
+        grid-area: img;
+        border: 2px solid $purple;
+        aspect-ratio: 1/1;
+        max-width: 150px;
+    }
+
+    &__text-column {
+        grid-area: text;
+    }
+
+    &__title {
+        font-family: $primaryFont;
+        font-size: 14px;
+        margin-top: 0;
+        margin-bottom: 8px;
+        color: $purple;
+    }
+
+    &__text {
+        font-family: $secondaryFont;
+        font-size: 10px;
+        line-height: 14px;
+    }
+
+    &__score {
+        grid-area: achievement;
+        text-align: center;
+    }
+
+    &__achievement {
+        color: $purple;
+        font-family: $primaryFont;
+        font-size: 14px;
+        font-weight: 700;
+        margin-top: 0;
+        margin-bottom: 8px;
+    }
+
+    &__percentage {
+        font-family: $primaryFont;
+        font-size: 12px;
+        font-weight: 400;
+        margin-top: 0;
+        margin-bottom: 8px;
+    }
+
+    &__unlocked {
+        font-family: $secondaryFont;
+        color: $green;
+        font-size: 10px;
+        margin: 0;
+    }
+}
+
+.completed {
+    color: $green;
+    border-color: $green;
+}

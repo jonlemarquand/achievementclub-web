@@ -2,14 +2,14 @@
 
 .page-header {
     display: grid;
-    grid-gap: 0 22px;
+    grid-gap: 0 20px;
     grid-template-columns: 68px 1fr;
     grid-template-areas: 'img subtitle' 'img title' 'img details';
     margin-bottom: 18px;
 
     &__img {
         grid-area: img;
-        height: 68px;
+        aspect-ratio: 1/1;
         border: 2px solid $green;
     }
 
