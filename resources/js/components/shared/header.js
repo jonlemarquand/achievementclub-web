@@ -12,13 +12,15 @@ const Header = () => {
 
     return (
         <div className="nav-header">
-            <SearchIcon />
-            <div className="nav-header__logo-placeholder">XA</div>
-            <div className={`nav-header__burger ${menuActive ? 'menu-active' : ''}`} onClick={handleMenuActive}>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
+            <div className="nav-header__content">
+                <SearchIcon />
+                <div className="nav-header__logo-placeholder">XA</div>
+                <div className={`nav-header__burger ${menuActive ? 'menu-active' : ''}`} onClick={handleMenuActive}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
         </div>
     )

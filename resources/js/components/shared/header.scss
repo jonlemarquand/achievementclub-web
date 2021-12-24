@@ -2,13 +2,19 @@
 
 .nav-header {
     position: fixed;
-    width: calc(100% - 28px);
+    width: 100%;
     background: $green;
-    padding: 8px 14px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     z-index: 100;
+
+
+    &__content {
+        padding: 8px 14px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 900px;
+        margin: 0 auto;
+    }
 
     &__logo-placeholder {
         color: $white;
