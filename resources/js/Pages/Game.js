@@ -28,6 +28,34 @@ const Game = () => {
             text: "Changed all four party members to jobs different from their default jobs and won a battle.",
             score: "90G",
             percentage: "77",
+        },
+        {
+            name: "Like a Boss",
+            completed: false,
+            text: "Changed all four party members to jobs different from their default jobs and won a battle.",
+            score: "90G",
+            percentage: "77",
+        },
+        {
+            name: "Like a Boss",
+            completed: false,
+            text: "Changed all four party members to jobs different from their default jobs and won a battle.",
+            score: "90G",
+            percentage: "77",
+        },
+        {
+            name: "Like a Boss",
+            completed: false,
+            text: "Changed all four party members to jobs different from their default jobs and won a battle.",
+            score: "90G",
+            percentage: "77",
+        },
+        {
+            name: "Like a Boss",
+            completed: false,
+            text: "Changed all four party members to jobs different from their default jobs and won a battle.",
+            score: "90G",
+            percentage: "77",
         }
     ]);
 

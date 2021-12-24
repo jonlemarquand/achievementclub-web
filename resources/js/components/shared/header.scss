@@ -1,11 +1,14 @@
 @import 'resources/sass/_variables.scss';
 
 .nav-header {
+    position: fixed;
+    width: calc(100% - 28px);
     background: $green;
     padding: 8px 14px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 100;
 
     &__logo-placeholder {
         color: $white;
