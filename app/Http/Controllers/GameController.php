@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreGameRequest;
 use App\Http\Requests\UpdateGameRequest;
 use App\Models\Game;
+use Inertia\Inertia;
 
 class GameController extends Controller
 {
@@ -43,11 +44,16 @@ class GameController extends Controller
      * Display the specified resource.
      *
      * @param  \App\Models\Game  $game
-     * @return \Illuminate\Http\Response
+     * @return \Inertia\Response
      */
-    public function show(Game $game)
+    public function show($name)
     {
-        //
+
+        $game = Game::where('name', $name)->firstOrFail();
+
+        return Inertia::render('Game', [
+            'game' => $game->only('id', 'name', 'publisher', 'developer', 'achievements'),
+        ]);
     }
 
     /**

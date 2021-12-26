@@ -4,7 +4,7 @@ import Infobox from "../components/shared/infobox";
 import {useState} from "react";
 import AchievementCard from "../components/shared/achievementCard";
 
-const Game = () => {
+const Game = ({ game }) => {
 
     const [stats, setStats] = useState([
         {stat: "960", suffix: "G", text: "36 out of 52 Achievements Unlocked"},
@@ -77,12 +77,12 @@ const Game = () => {
     return (
         <Layout>
             <PageHeader
-                title={"Yakuza: Like a Dragon"}
+                title={game.name}
                 subtitle={"Game"}
             >
                 <p>Released: Jan 2020 (Japan), Nov 2020 (Worldwide)</p>
-                <p>Developer: Ryu ga Gotoku Studios</p>
-                <p>Publisher: Sega</p>
+                <p>Developer: {game.developer.name}</p>
+                <p>Publisher: {game.publisher.name}</p>
             </PageHeader>
             <Infobox
                 title={"Your achievements"}
