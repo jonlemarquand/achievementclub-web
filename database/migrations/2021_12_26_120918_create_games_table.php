@@ -20,10 +20,10 @@ class CreateGamesTable extends Migration
             $table->unsignedBigInteger('developer_id');
             $table->string('cover_image');
             $table->bigInteger('overall_gamerscore');
-            $table->dateTime('release_date_jp');
-            $table->dateTime('release_date_eu');
-            $table->dateTime('release_date_us');
-            $table->dateTime('release_date_global');
+            $table->dateTime('release_date_jp')->nullable();
+            $table->dateTime('release_date_eu')->nullable();
+            $table->dateTime('release_date_us')->nullable();
+            $table->dateTime('release_date_global')->nullable();
             $table->timestamps();
 
             $table->foreign('publisher_id')->references('id')->on('publishers');

@@ -14,7 +14,7 @@ class DeveloperFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name' => ucwords($this->faker->safeColorName() . ' ' . $this->faker->city()),
         ];
     }
 }
