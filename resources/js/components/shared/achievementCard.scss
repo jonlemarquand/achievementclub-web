@@ -45,6 +45,7 @@
     &__text {
         font-family: $secondaryFont;
         @include font-size($bodyFontSizes);
+        @include line-height($bodyLineHeights);
     }
 
     &__score {

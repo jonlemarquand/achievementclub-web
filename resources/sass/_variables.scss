@@ -28,6 +28,12 @@ $bodyFontSizes: (
     640px : 16px
 );
 
+$bodyLineHeights: (
+    null  : 16px,
+    480px : 18px,
+    640px : 21px
+);
+
 @mixin font-size($fs-map) {
     @each $fs-breakpoint, $fs-font-size in $fs-map {
         @if $fs-breakpoint == null {
@@ -36,6 +42,19 @@ $bodyFontSizes: (
         @else {
             @media screen and (min-width: $fs-breakpoint) {
                 font-size: $fs-font-size;
+            }
+        }
+    }
+}
+
+@mixin line-height($fs-map) {
+    @each $fs-breakpoint, $fs-font-size in $fs-map {
+        @if $fs-breakpoint == null {
+            line-height: $fs-font-size;
+        }
+        @else {
+            @media screen and (min-width: $fs-breakpoint) {
+                line-height: $fs-font-size;
             }
         }
     }
