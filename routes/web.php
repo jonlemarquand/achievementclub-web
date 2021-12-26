@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\GameController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,8 +15,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::inertia('/', 'Homepage');
-Route::inertia('/game', 'Game');
-Route::inertia('/user', 'User');
-
+Route::get('/', [UserController::class, 'index']);
 Route::get('/game/{name}', [GameController::class, 'show']);
+Route::get('/user/{user}', [UserController::class, 'show']);
