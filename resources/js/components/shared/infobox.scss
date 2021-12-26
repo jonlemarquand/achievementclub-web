@@ -35,6 +35,6 @@
     }
 
     &__text {
-        font-size: 10px;
+        @include font-size($bodyFontSizes);
     }
 }

@@ -1,6 +1,7 @@
 import SearchIcon from './searchIcon';
 import './header.scss';
 import {useState} from "react";
+import {Link} from "@inertiajs/inertia-react";
 
 const Header = () => {
 
@@ -14,7 +15,7 @@ const Header = () => {
         <div className="nav-header">
             <div className="nav-header__content">
                 <SearchIcon />
-                <div className="nav-header__logo-placeholder">XA</div>
+                <Link className="nav-header__logo-placeholder" href="/">XA</Link>
                 <div className={`nav-header__burger ${menuActive ? 'menu-active' : ''}`} onClick={handleMenuActive}>
                     <span></span>
                     <span></span>

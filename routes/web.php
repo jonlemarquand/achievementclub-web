@@ -15,3 +15,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::inertia('/', 'Homepage');
 Route::inertia('/game', 'Game');
+Route::inertia('/user', 'User');

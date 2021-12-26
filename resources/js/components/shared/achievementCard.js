@@ -1,8 +1,9 @@
 import './achievementCard.scss';
+import {Link} from "@inertiajs/inertia-react";
 
-const AchievementCard = ({name, completed, type, date, time, score, text, percentage}) => {
+const AchievementCard = ({name, completed, type, date, time, score, text, percentage, link}) => {
     return (
-        <div className="achievement-card">
+        <Link href={link} className="achievement-card">
             {completed && <div className="achievement-card__background"></div>}
             <img className={`achievement-card__img ${completed ? "completed" : ''}`} alt={name}/>
             <div className="achievement-card__text-column">
@@ -17,7 +18,7 @@ const AchievementCard = ({name, completed, type, date, time, score, text, percen
                     <p className="achievement-card__unlocked">{time}</p>
                 </>}
             </div>
-        </div>
+        </Link>
     )
 }
 

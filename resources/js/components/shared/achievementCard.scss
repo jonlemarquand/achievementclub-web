@@ -7,6 +7,8 @@
     grid-gap: 0 22px;
     grid-template-areas: "img text text achievement";
     padding: 14px 0;
+    text-decoration: none;
+    color: $black;
 
     &__background {
         height: 100%;
@@ -34,7 +36,7 @@
 
     &__title {
         font-family: $primaryFont;
-        font-size: 14px;
+        @include font-size($h2FontSizes);
         margin-top: 0;
         margin-bottom: 8px;
         color: $purple;
@@ -42,8 +44,7 @@
 
     &__text {
         font-family: $secondaryFont;
-        font-size: 10px;
-        line-height: 14px;
+        @include font-size($bodyFontSizes);
     }
 
     &__score {
@@ -54,7 +55,7 @@
     &__achievement {
         color: $purple;
         font-family: $primaryFont;
-        font-size: 14px;
+        @include font-size($h2FontSizes);
         font-weight: 700;
         margin-top: 0;
         margin-bottom: 8px;
@@ -62,7 +63,7 @@
 
     &__percentage {
         font-family: $primaryFont;
-        font-size: 12px;
+        @include font-size($bodyFontSizes);
         font-weight: 400;
         margin-top: 0;
         margin-bottom: 8px;
@@ -71,7 +72,7 @@
     &__unlocked {
         font-family: $secondaryFont;
         color: $green;
-        font-size: 10px;
+        @include font-size($bodyFontSizes);
         margin: 0;
     }
 }
